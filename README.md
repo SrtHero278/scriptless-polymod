@@ -1,3 +1,8 @@
+# What is this repository?
+
+This is a copy pasted repository of [polymod](https://github.com/larsiusprime/polymod). A respository made as a modding framework for the language, [Haxe](https://github.com/HaxeFoundation/haxe).
+The reason this exists is because over at [Test Engine](https://github.com/504brandon/Test-Engine-V1---FNF), polymod kept on overriding [YoshiCrafter29](https://github.com/YoshiCrafter29)'s hscript fork with the regular one.
+
 ![](./logo.png)
 
 # Polymod
