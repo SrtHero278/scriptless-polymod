@@ -3,7 +3,6 @@ package polymod;
 import haxe.Json;
 import haxe.io.Bytes;
 import polymod.backends.IBackend;
-import polymod.hscript.PolymodScriptClass;
 import polymod.backends.PolymodAssetLibrary;
 import polymod.backends.PolymodAssets;
 import polymod.format.JsonHelp;
@@ -277,15 +276,6 @@ class Polymod
 
 		// Store the params for later use (by loadMod, unloadMod, and clearMods)
 		prevParams = params;
-
-    // Do scripted class initialization now that the assetLibrary is loaded.
-    if (params.useScriptedClasses) {
-      Polymod.notice(PolymodErrorCode.SCRIPT_CLASS_PARSING, 'Parsing script classes...');
-      PolymodScriptClass.registerAllScriptClasses();
-
-      var classList = PolymodScriptClass.listScriptClasses();
-      Polymod.notice(PolymodErrorCode.SCRIPT_CLASS_PARSED, 'Parsed and registered ${classList.length} scripted classes.');
-    }
 
 		return modMeta;
 	}
@@ -858,12 +848,6 @@ enum PolymodErrorType
    * - Ensure the input is either an IFileSystem or a Class<IFileSystem>.
    */
   var BAD_CUSTOM_FILESYSTEM:String = 'bad_custom_filesystem';
-
-  /**
-   * You attempted to register a new scripted class with a name that is already in use.
-   * - If you need to clear the class descriptor, call `PolymodScriptClass.clearClasses()`.
-   */
-   var SCRIPT_CLASS_ALREADY_REGISTERED:String = 'bad_custom_filesystem';
 
 	/**
 	 * You attempted to perform an operation that requires Polymod to be initialized.

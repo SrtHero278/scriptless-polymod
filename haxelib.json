@@ -1,9 +1,9 @@
 {
-  "name": "polymod",
-  "url" : "https://github.com/larsiusprime/polymod",
+  "name": "test-eg-polymod",
+  "url" : "https://github.com/SrtHero278/test-eg-polymod",
   "license": "MIT",
   "tags": ["mod","game","data","asset"],
-  "description": "An atomic modding framework for Haxe games",
+  "description": "An atomic modding framework for Haxe games. This is a duplicate to work with YoshiCrafter29's hscript repository.",
   "version": "1.5.2",
   "releasenote": "Fixed bug accessing enums in scripted classes",
   "contributors": ["MasterEric", "larsiusprime"]
